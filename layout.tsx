@@ -1,11 +1,10 @@
-// app/layout.tsx
-
 import "./globals.css";
-import React from "react";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "BelowTheLeague Live",
-  description: "Live scores, match centre, fixtures, results and league coverage for Step 4 Isthmian North.",
+  description:
+    "Live scores, vidiprinter, fixtures, results and league table for Step 4 Isthmian North.",
 };
 
 export default function RootLayout({
@@ -15,8 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-neutral-950 text-white min-h-screen">
-        {children}
+      <body className="min-h-screen bg-btl-dark text-white flex justify-center">
+        {/* Constrain to mobile-ish width */}
+        <div className="w-full max-w-md">{children}</div>
       </body>
     </html>
   );
