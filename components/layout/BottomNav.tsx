@@ -1,4 +1,3 @@
-// components/layout/BottomNav.tsx
 'use client';
 
 import Link from 'next/link';
@@ -10,11 +9,11 @@ interface BottomNavProps {
 }
 
 const items: { key: Tab; label: string; href: string }[] = [
-  { key: 'live',      label: 'Live',      href: '/' },
-  { key: 'fixtures',  label: 'Fixtures',  href: '/fixtures' },
-  { key: 'results',   label: 'Results',   href: '/results' },
-  { key: 'league',    label: 'League',    href: '/league' },
-  { key: 'teams',     label: 'Teams',     href: '/teams' },
+  { key: 'live',     label: 'Live',     href: '/' },
+  { key: 'fixtures', label: 'Fixtures', href: '/fixtures' },
+  { key: 'results',  label: 'Results',  href: '/results' },
+  { key: 'league',   label: 'League',   href: '/league' },
+  { key: 'teams',    label: 'Teams',    href: '/teams' },
 ];
 
 export default function BottomNav({ active }: BottomNavProps) {
@@ -28,11 +27,13 @@ export default function BottomNav({ active }: BottomNavProps) {
               key={item.key}
               href={item.href}
               className={`flex flex-col items-center gap-0.5 px-1 ${
-                isActive ? 'text-btl-PRIMARY font-semibold' : 'text-zinc-300'
+                isActive ? 'text-orange-500 font-semibold' : 'text-zinc-300'
               }`}
             >
               <span>{item.label}</span>
-              {isActive && <span className="h-0.5 w-6 rounded-full bg-btl-PRIMARY" />}
+              {isActive && (
+                <span className="h-0.5 w-6 rounded-full bg-orange-500" />
+              )}
             </Link>
           );
         })}
