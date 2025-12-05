@@ -1,8 +1,7 @@
-// components/layout/AppLayout.tsx
 'use client';
 
-import BottomNav from './BottomNav';
 import React from 'react';
+import BottomNav from './BottomNav';
 
 type Tab = 'live' | 'fixtures' | 'results' | 'league' | 'teams';
 
@@ -13,13 +12,13 @@ interface AppLayoutProps {
 
 export default function AppLayout({ activeTab, children }: AppLayoutProps) {
   return (
-    <div className="min-h-screen bg-btl-DARK text-white flex flex-col">
-      {/* Main scrollable content */}
+    <div className="min-h-screen bg-neutral-950 text-white flex flex-col">
+      {/* Main content, mobile-focused width */}
       <main className="flex-1 pb-16 max-w-md mx-auto w-full">
         {children}
       </main>
 
-      {/* Bottom navigation fixed */}
+      {/* Fixed bottom nav */}
       <BottomNav active={activeTab} />
     </div>
   );
