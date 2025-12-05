@@ -2,54 +2,62 @@
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#02040A] text-white">
-      {/* TOP BAR / HERO */}
-      <header className="sticky top-0 z-20 bg-gradient-to-r from-orange-600 via-orange-500 to-amber-400 shadow-lg">
+    <div className="min-h-screen flex flex-col bg-[#02030A] text-white">
+      {/* TOP BAR / BRAND HERO */}
+      <header className="sticky top-0 z-20 bg-gradient-to-r from-[#F15A29] via-orange-500 to-amber-400 shadow-lg shadow-black/40">
         <div className="max-w-md mx-auto px-4 pt-3 pb-2.5">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="h-9 w-9 rounded-2xl bg-black/20 border border-white/30 flex items-center justify-center text-[11px] font-bold tracking-[0.18em]">
-                BTL
+          <div className="flex items-center justify-between gap-3">
+            {/* BTL badge + wordmark */}
+            <div className="flex items-center gap-2.5">
+              <div className="h-9 w-9 rounded-2xl bg-black/15 border border-white/35 flex items-center justify-center">
+                <span className="text-[11px] font-bold tracking-[0.22em]">
+                  BTL
+                </span>
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-black/60">
-                  BelowTheLeague Live
+                <p className="text-[10px] uppercase tracking-[0.28em] text-black/60">
+                  BelowTheLeague
                 </p>
                 <h1 className="text-[17px] font-semibold leading-tight">
-                  Isthmian North Match Centre
+                  Isthmian North · Match Centre
                 </h1>
+                <p className="text-[11px] text-black/75">
+                  Non league. Told properly.
+                </p>
               </div>
             </div>
+
+            {/* Right side pills */}
             <div className="flex flex-col items-end gap-1">
-              <span className="text-[10px] px-2 py-0.5 rounded-full bg-black/15 border border-black/20 font-semibold">
+              <span className="text-[10px] px-2.5 py-0.5 rounded-full bg-black/18 border border-black/25 font-semibold">
                 Step 4
               </span>
-              <span className="text-[10px] text-black/70 font-medium">
-                Demo mode · V1
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-black/12 border border-black/20 text-black/80">
+                Live centre · BTL V1
               </span>
             </div>
           </div>
 
           {/* quick filters */}
           <div className="mt-3 flex items-center gap-2 text-[11px]">
-            <button className="px-3 py-1 rounded-full bg-black/15 border border-black/30 font-medium">
-              All
+            <button className="px-3 py-1 rounded-full bg-black/18 border border-black/35 font-medium">
+              All games
             </button>
-            <button className="px-3 py-1 rounded-full bg-red-500/20 border border-red-500/50 text-red-100">
+            <button className="px-3 py-1 rounded-full bg-red-500/18 border border-red-500/60 text-red-100">
               Live · 2
             </button>
-            <button className="px-3 py-1 rounded-full bg-black/10 border border-black/25 text-black/80">
-              Upcoming
+            <button className="px-3 py-1 rounded-full bg-black/12 border border-black/25 text-black/80">
+              Today
             </button>
-            <button className="px-3 py-1 rounded-full bg-black/10 border border-black/25 text-black/80">
-              Final
+            <button className="px-3 py-1 rounded-full bg-black/12 border border-black/25 text-black/80">
+              My club
             </button>
           </div>
         </div>
       </header>
 
       {/* MAIN CONTENT */}
-      <main className="flex-1 max-w-md mx-auto w-full px-4 pt-3 pb-20 space-y-5">
+      <main className="flex-1 max-w-md mx-auto w-full px-4 pt-3 pb-20 space-y-6">
         {/* LIVE STRIP */}
         <section className="space-y-2">
           <div className="flex items-center justify-between">
@@ -58,13 +66,13 @@ export default function HomePage() {
             </h2>
             <span className="text-[11px] text-emerald-400 flex items-center gap-1">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              Live feed on
+              Matchday demo
             </span>
           </div>
 
           <div className="flex gap-2 overflow-x-auto no-scrollbar pb-1">
             {/* strip card 1 */}
-            <article className="min-w-[190px] rounded-2xl bg-zinc-900/80 border border-zinc-700/70 p-2.5 flex flex-col gap-1">
+            <article className="min-w-[190px] rounded-2xl bg-zinc-900/80 border border-zinc-700/70 p-2.5 flex flex-col gap-1.5">
               <div className="flex items-center justify-between gap-1">
                 <p className="text-[11px] font-semibold">
                   Maldon &amp; Tiptree
@@ -79,12 +87,12 @@ export default function HomePage() {
                 <span className="font-semibold">1</span>
               </div>
               <p className="text-[10px] text-zinc-400 truncate">
-                Bonne (68&apos;), Sears (23&apos;) · Tilbury 41&apos;
+                Bonne 68&apos;, Sears 23&apos; · Tilbury 41&apos;
               </p>
             </article>
 
             {/* strip card 2 */}
-            <article className="min-w-[190px] rounded-2xl bg-zinc-900/60 border border-zinc-700/60 p-2.5 flex flex-col gap-1">
+            <article className="min-w-[190px] rounded-2xl bg-zinc-900/60 border border-zinc-700/60 p-2.5 flex flex-col gap-1.5">
               <div className="flex items-center justify-between gap-1">
                 <p className="text-[11px] font-semibold">Grays Athletic</p>
                 <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-zinc-100/5 text-zinc-200 border border-zinc-500/40">
@@ -102,7 +110,7 @@ export default function HomePage() {
             </article>
 
             {/* strip card 3 */}
-            <article className="min-w-[190px] rounded-2xl bg-zinc-900/40 border border-zinc-800 p-2.5 flex flex-col gap-1">
+            <article className="min-w-[190px] rounded-2xl bg-zinc-900/40 border border-zinc-800 p-2.5 flex flex-col gap-1.5">
               <div className="flex items-center justify-between gap-1">
                 <p className="text-[11px] font-semibold">Wroxham</p>
                 <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/40">
@@ -110,7 +118,9 @@ export default function HomePage() {
                 </span>
               </div>
               <div className="flex items-center justify-between text-[13px]">
-                <span className="font-semibold text-zinc-300">vs Gorleston</span>
+                <span className="font-semibold text-zinc-300">
+                  vs Gorleston
+                </span>
               </div>
               <p className="text-[10px] text-zinc-500 truncate">
                 Trafford Park · KO 15:00
@@ -119,13 +129,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* FEATURE LIVE MATCH CARDS */}
+        {/* FEATURED LIVE MATCHES */}
         <section className="space-y-2">
           <div className="flex items-center justify-between">
             <h2 className="text-[12px] font-semibold tracking-[0.16em] uppercase text-zinc-300">
-              Featured live games
+              Featured games
             </h2>
-            <span className="text-[11px] text-zinc-400">Tap into match centre (soon)</span>
+            <span className="text-[11px] text-zinc-400">
+              Match centre view coming soon
+            </span>
           </div>
 
           <div className="space-y-2.5">
@@ -192,7 +204,7 @@ export default function HomePage() {
             <h2 className="text-[12px] font-semibold tracking-[0.16em] uppercase text-zinc-300">
               Live report · Vidiprinter
             </h2>
-            <span className="text-[11px] text-zinc-400">Auto-scroll (coming soon)</span>
+            <span className="text-[11px] text-zinc-400">Auto scroll coming soon</span>
           </div>
 
           <div className="rounded-2xl bg-zinc-950 border border-zinc-800 p-3 space-y-1.5 text-[11px]">
@@ -201,7 +213,7 @@ export default function HomePage() {
                 72&apos;
               </span>
               <p className="text-zinc-100">
-                GOAL – Maldon &amp; Tiptree 2–1 Tilbury: Bonne heads in from a corner.
+                GOAL · Maldon &amp; Tiptree 2–1 Tilbury. Bonne heads in from a corner.
               </p>
             </div>
             <div className="flex items-start gap-2">
@@ -209,7 +221,7 @@ export default function HomePage() {
                 68&apos;
               </span>
               <p className="text-zinc-200">
-                Substitution for Tilbury: Jones replaced by Smith.
+                Substitution for Tilbury. Jones replaced by Smith.
               </p>
             </div>
             <div className="flex items-start gap-2">
@@ -217,7 +229,7 @@ export default function HomePage() {
                 HT
               </span>
               <p className="text-zinc-300">
-                Grays Athletic 1–1 Felixstowe: level at the break.
+                Grays Athletic 1–1 Felixstowe. Level at the break.
               </p>
             </div>
             <div className="flex items-start gap-2">
@@ -225,7 +237,7 @@ export default function HomePage() {
                 15:00
               </span>
               <p className="text-zinc-400">
-                Kick-off times and match events will appear here as we connect the live feed.
+                Kick off times and real events will appear here once the BTL data feed is wired in.
               </p>
             </div>
           </div>
@@ -238,7 +250,7 @@ export default function HomePage() {
               Today&apos;s fixtures
             </h2>
             <button className="text-[11px] text-orange-400">
-              Full fixtures (soon)
+              Full list coming soon
             </button>
           </div>
 
@@ -269,7 +281,9 @@ export default function HomePage() {
               >
                 <div className="flex flex-col">
                   <span className="font-medium">
-                    {fx.home} <span className="font-normal text-zinc-400">vs</span> {fx.away}
+                    {fx.home}{" "}
+                    <span className="font-normal text-zinc-400">vs</span>{" "}
+                    {fx.away}
                   </span>
                   <span className="text-[11px] text-zinc-500">{fx.ground}</span>
                 </div>
@@ -279,19 +293,25 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* LITTLE STATS TEASER */}
-        <section className="rounded-2xl bg-zinc-950 border border-zinc-800 px-3 py-2.5 flex items-center justify-between text-[11px] text-zinc-300">
-          <div>
+        {/* BTL BRAND FOOTER CARD */}
+        <section className="rounded-2xl bg-gradient-to-r from-[#F15A29]/15 via-zinc-900 to-zinc-950 border border-zinc-800 px-3.5 py-3 flex items-center justify-between text-[11px]">
+          <div className="max-w-[70%]">
             <p className="font-semibold text-zinc-100">
-              League table & player stats
+              Built by BelowTheLeague
             </p>
             <p className="text-[11px] text-zinc-400">
-              Coming next: live standings, form, top scorers and more for every Step 4 club.
+              Non league like never before. Stories, stats and live data for clubs
+              the big platforms ignore.
             </p>
           </div>
-          <span className="px-2 py-1 rounded-full bg-orange-500/15 text-orange-300 border border-orange-500/40">
-            V1.5 soon
-          </span>
+          <div className="flex flex-col items-end gap-1">
+            <span className="px-2 py-0.5 rounded-full bg-black/40 border border-zinc-600 text-[10px]">
+              Beta match centre
+            </span>
+            <span className="text-[10px] text-zinc-400">
+              Follow @BelowTheLeague
+            </span>
+          </div>
         </section>
       </main>
 
