@@ -2,10 +2,10 @@
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#02030A] text-white">
+    <div className="min-h-screen flex flex-col bg-[#03040A] text-white">
       {/* TOP BAR / BRAND HERO */}
       <header className="sticky top-0 z-20 bg-gradient-to-r from-[#F15A29] via-orange-500 to-amber-400 shadow-lg shadow-black/40">
-        <div className="max-w-md mx-auto px-4 pt-3 pb-2.5">
+        <div className="max-w-md mx-auto px-4 pt-3 pb-3">
           <div className="flex items-center justify-between gap-3">
             {/* BTL badge + wordmark */}
             <div className="flex items-center gap-2.5">
@@ -249,9 +249,6 @@ export default function HomePage() {
             <h2 className="text-[12px] font-semibold tracking-[0.16em] uppercase text-zinc-300">
               Today&apos;s fixtures
             </h2>
-            <button className="text-[11px] text-orange-400">
-              Full list coming soon
-            </button>
           </div>
 
           <div className="space-y-1.5 text-[12px]">
@@ -294,7 +291,7 @@ export default function HomePage() {
         </section>
 
         {/* BTL BRAND FOOTER CARD */}
-        <section className="rounded-2xl bg-gradient-to-r from-[#F15A29]/15 via-zinc-900 to-zinc-950 border border-zinc-800 px-3.5 py-3 flex items-center justify-between text-[11px]">
+        <section className="rounded-2xl bg-gradient-to-r from-[#F15A29]/18 via-zinc-900 to-zinc-950 border border-zinc-800 px-3.5 py-3 flex items-center justify-between text-[11px]">
           <div className="max-w-[70%]">
             <p className="font-semibold text-zinc-100">
               Built by BelowTheLeague
