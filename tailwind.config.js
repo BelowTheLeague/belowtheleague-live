@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
+    "./layout.tsx",
+    "./page.tsx",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -9,8 +10,8 @@ module.exports = {
       colors: {
         btl: {
           primary: "#F15A29",
-          dark: "#0a0a0a",
-          card: "#ffffff",
+          dark: "#050505",
+          card: "#FFFFFF",
         },
       },
     },
