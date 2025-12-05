@@ -1,4 +1,3 @@
-// page.tsx
 import AppLayout from './components/layout/AppLayout';
 import LiveScreen from './components/live/LiveScreen';
 
